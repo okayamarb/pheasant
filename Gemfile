@@ -29,6 +29,7 @@ gem "kaminari"
 gem "active_decorator"
 gem "devise"
 gem "devise-i18n"
+gem 'devise-token_authenticatable'
 gem "cancan"
 gem "rails_12factor", group: :production
 group :development, :test do
