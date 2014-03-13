@@ -1,0 +1,9 @@
+LOG:  database system was interrupted; last known up at 2014-02-21 21:12:10 JST
+LOG:  database system was not properly shut down; automatic recovery in progress
+LOG:  record with zero length at 0/CD897F58
+LOG:  redo is not required
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  role "pheasant" does not exist
+FATAL:  database "pheasant_development" does not exist
+FATAL:  database "pheasant_development" does not exist
