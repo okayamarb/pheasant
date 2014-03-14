@@ -31,6 +31,7 @@ gem "devise"
 gem "devise-i18n"
 gem 'devise-token_authenticatable'
 gem "cancan"
+gem 'acts-as-taggable-on'
 gem "rails_12factor", group: :production
 group :development, :test do
   gem "rspec-rails"
