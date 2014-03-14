@@ -7,3 +7,7 @@ LOG:  database system is ready to accept connections
 FATAL:  role "pheasant" does not exist
 FATAL:  database "pheasant_development" does not exist
 FATAL:  database "pheasant_development" does not exist
+FATAL:  terminating autovacuum process due to administrator command
+ERROR:  database "pheasant_development" is being accessed by other users
+DETAIL:  There is 1 other session using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "pheasant_development"
