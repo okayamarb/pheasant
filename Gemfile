@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.3'
 
 gem 'rails-api'
-
+gem 'active_model_serializers'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
@@ -32,6 +32,7 @@ gem "devise-i18n"
 gem 'devise-token_authenticatable'
 gem "cancan"
 gem 'acts-as-taggable-on'
+gem 'acts_as_commentable'
 gem "rails_12factor", group: :production
 group :development, :test do
   gem "rspec-rails"

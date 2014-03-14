@@ -11,14 +11,15 @@ module Pheasant
     
     config.active_record.default_timezone = :local
     config.time_zone = 'Tokyo'
+    I18n.enforce_available_locales = false
     config.i18n.default_locale = :ja
 
     config.generators do |g|
       g.orm :active_record
       g.test_framework :rspec, fixture: true, fixture_replacement: :factory_girl
       g.view_specs false
-      g.controller_specs false
-      g.routing_specs false
+      g.controller_specs true
+      g.routing_specs true
       g.helper_specs false
       g.request_specs false
       g.assets false
@@ -26,7 +27,7 @@ module Pheasant
     end
 
     config.autoload_paths += %W(#{config.root}/lib)
-  
+    config.secret_key_base = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]['secret_key_base']
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

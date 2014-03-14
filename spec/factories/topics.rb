@@ -5,4 +5,8 @@ FactoryGirl.define do
     title "今後について"
     content "どのように開発していこうか？"
   end
+  factory :topic_seq, parent: :topic do
+    sequence(:title) {|n| "タイトル#{n}"}
+    content "本文です"
+  end
 end

@@ -11,6 +11,8 @@ GEM
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
     active_decorator (0.3.4)
+    active_model_serializers (0.8.1)
+      activemodel (>= 3.0)
     activemodel (4.0.3)
       activesupport (= 4.0.3)
       builder (~> 3.1.0)
@@ -28,6 +30,7 @@ GEM
       tzinfo (~> 0.3.37)
     acts-as-taggable-on (3.0.2)
       rails (>= 3, < 5)
+    acts_as_commentable (4.0.1)
     addressable (2.3.5)
     annotate (2.6.2)
       activerecord (>= 2.3.0)
@@ -209,7 +212,9 @@ PLATFORMS
 
 DEPENDENCIES
   active_decorator
+  active_model_serializers
   acts-as-taggable-on
+  acts_as_commentable
   annotate
   better_errors
   binding_of_caller

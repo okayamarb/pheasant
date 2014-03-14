@@ -1,4 +1,5 @@
 Pheasant::Application.routes.draw do
+  resources :topics, except: [:new, :edit]
   devise_for :users, controllers: {
       registrations: 'registration'
   }
