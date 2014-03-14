@@ -14,8 +14,8 @@
 
 FactoryGirl.define do
   factory :role do
-    name "MyString"
-    code "MyString"
-    memo "MyText"
+    name "管理者"
+    code "admin"
+    memo "メモ"
   end
 end
