@@ -2,7 +2,11 @@ class TokensController < ApplicationController
   skip_before_action :verify_authenticity_token
   skip_before_action :authenticate_user_from_token!
 
+  # before_action :user_params, only: [:create]
+
   def create
+    # email = user_params[:email]
+    # password = user_params[:password]
     email = params[:email]
     password = params[:password]
 
@@ -38,5 +42,14 @@ class TokensController < ApplicationController
       @user.reset_authentication_token!
       render status: 200, json: {token: params[:token]}
     end
+  end
+
+  def options
+    head :ok
+  end
+
+  private
+  def user_params
+    params.require(:user).permit(:email, :password)
   end
 end
