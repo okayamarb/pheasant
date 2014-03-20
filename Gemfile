@@ -33,6 +33,7 @@ gem 'devise-token_authenticatable'
 gem "cancan"
 gem 'acts-as-taggable-on'
 gem 'acts_as_commentable'
+gem 'rack-cors'
 gem "rails_12factor", group: :production
 group :development, :test do
   gem "rspec-rails"
