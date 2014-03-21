@@ -1,6 +1,6 @@
 class TokensController < ApplicationController
   skip_before_action :verify_authenticity_token
-  skip_before_action :authenticate_user_from_token!
+  skip_before_action :authenticate_user_from_token!, only: [:create]
 
   def create
     email = params[:email]
