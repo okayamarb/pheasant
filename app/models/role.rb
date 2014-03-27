@@ -14,4 +14,5 @@ class Role < ActiveRecord::Base
   has_many :users
   validates :name, presence: true, uniqueness: true
   validates :code, presence: true, uniqueness: true
+  validates_format_of :code, with: /\A[A-Za-z]+[0-9A-Za-z_\-]+\z/, message: '先頭は半角英字、以降半角英数_-のみでお願いします'
 end

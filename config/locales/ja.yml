@@ -1,0 +1,62 @@
+ja:
+  activerecord:
+    errors:
+      template:
+        header:
+          one: ! '%{model}にエラーが発生しました。'
+          other: ! '%{model}に%{count}つのエラーが発生しました。'
+        body: 次の項目を確認してください。
+      messages:
+        inclusion: 一覧にありません。
+        exclusion: 予約されています。
+        invalid: 不正な値です。
+        confirmation: 一致しません。
+        accepted: 受諾してください。
+        empty: 必須入力です。
+        blank: 必須入力です。
+        too_long: "%{count}文字以内で入力してください。"
+        too_short: "%{count}文字以上で入力してください。"
+        wrong_length: "%{count}文字で入力してください。"
+        taken: すでに存在します。
+        not_a_number: 数値で入力してください。
+        not_an_integer: 整数で入力してください。
+        greater_than: "%{count}より大きい値にしてください。"
+        greater_than_or_equal_to: "%{count}以上の値にしてください。"
+        equal_to: "%{count}にしてください。"
+        less_than: "%{count}より小さい値にしてください。"
+        less_than_or_equal_to: "%{count}以下の値にしてください。"
+        odd: 奇数にしてください。
+        even: 偶数にしてください。
+        record_invalid: バリデーションに失敗しました。 %{errors}
+        email: メールアドレス形式として正しくありません。
+        alphanumeric: 半角英数字で入力してください。
+        range: "%{model}の範囲内で入力してください。"
+        time: 範囲に誤りがあります。
+        term: 範囲に誤りがあります。
+        day: 終了日は開始日の翌日以降に設定してください
+        day_range: 期間の終了は開始以降に設定してください
+        check_count: "%{count}つ以上選択してください"
+        institution_state: 既にスケジュール登録されています。
+        institution_forever: 期限なしのスケジュールには登録出来ません。
+        presence_select: 選択してください。
+        existence: すでに存在します。
+        json: 「"（ダブルクォーテーション）」「/（半角スラッシュ）」「\（半角バックスラッシュ）」は使えません。
+        not_found_data: 対象のデータは存在しません 。
+        day_range_data: 期間は%{start}〜%{end}の間で設定してください。
+        not_image_data: 画像ファイルではありません。
+        file_storage_overflowed: ファイル保存領域が足りません。
+        not_found_user: ユーザーが存在しません。
+        expired: 有効期限が切れています。
+        before: 有効期限前のためご利用できません。
+      full_messages:
+        format: ! '%{attribute}%{message}'
+
+
+  activemodel:
+    errors:
+      messages:
+        invalid: 不正な値です。
+        blank: 必須入力です。
+        email: メールアドレス形式として正しくありません。
+      full_messages:
+        format: ! '%{attribute}%{message}'

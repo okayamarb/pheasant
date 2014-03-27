@@ -18,4 +18,8 @@ FactoryGirl.define do
     code "admin"
     memo "メモ"
   end
+  factory :role_seq, parent: :role do
+    sequence(:name) {|n| "一般権限#{n}"}
+    sequence(:code) {|n| "normal#{n}"}
+  end
 end

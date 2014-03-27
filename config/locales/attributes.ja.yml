@@ -1,0 +1,35 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      role: 権限
+
+    attributes:
+      user:
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード(確認用)
+        current_password: 現在のパスワード
+        role_id: 権限
+        role: 権限
+        last_sign_in_at: 最終ログイン日
+        last_sign_in_ip: 最終ログインIP
+        reset_password_token: パスワード初期化トークン
+        reset_password_sent_at: パスワード初期化メール送信日
+        remember_created_at: ログイン情報記憶作成日
+        sign_in_count: ログイン回数
+        current_sign_in_at: 現在のログイン日
+        current_sign_in_ip: 現在のログインIP
+        confirmation_token: 確認用トークン
+        confirmed_at: 確認日
+        confirmation_sent_at: 確認メール送信日
+        unconfirmed_email: 未確認メールアドレス
+        created_at: 作成日
+        updated_at: 更新日
+
+      role:
+        code: 権限コード
+        name: 権限名
+        memo: 備考
+        created_at: 作成日
+        updated_at: 更新日
