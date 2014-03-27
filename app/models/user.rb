@@ -16,6 +16,7 @@
 #  updated_at             :datetime
 #  authentication_token   :string(255)
 #  role_id                :integer
+#  deleted_at             :datetime
 #
 
 class User < ActiveRecord::Base
@@ -31,5 +32,9 @@ class User < ActiveRecord::Base
   validates :password, presence: true, confirmation: true, length: {in: Devise.password_length}, on: :create
   validates :password, confirmation: true, length: {in: Devise.password_length}, allow_blank: true, on: :update
   validates_presence_of :role
+
+  acts_as_paranoid
+  # validates_as_paranoid
+  # validates_uniqueness_of_without_deleted :email
 
 end

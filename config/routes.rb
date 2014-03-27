@@ -3,6 +3,7 @@ Pheasant::Application.routes.draw do
   devise_for :users, controllers: {
       registrations: 'registration'
   }
+  # resources :users, expect: [:new, :edit]
 
   resources :roles, except: [:new, :edit]
   resource :tokens, only: [:create, :destroy]

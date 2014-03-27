@@ -16,6 +16,7 @@
 #  updated_at             :datetime
 #  authentication_token   :string(255)
 #  role_id                :integer
+#  deleted_at             :datetime
 #
 
 # Read about factories at https://github.com/thoughtbot/factory_girl
@@ -24,5 +25,8 @@ FactoryGirl.define do
   factory :user do
     email "admin@email.com"
     password "password"
+  end
+  factory :user_seq, parent: :user do
+    sequence(:email) {|n| "user#{n}@email.com"}
   end
 end
