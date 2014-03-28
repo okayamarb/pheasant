@@ -1,10 +1,7 @@
 Pheasant::Application.routes.draw do
   resources :topics, except: [:new, :edit]
-  devise_for :users, controllers: {
-      registrations: 'registration'
-  }
-  # resources :users, expect: [:new, :edit]
-
+  devise_for :users, path: :me, skip: [:sessions]
+  resources :users, except: [:new, :edit]
   resources :roles, except: [:new, :edit]
   resource :tokens, only: [:create, :destroy]
 
