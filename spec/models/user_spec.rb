@@ -16,6 +16,7 @@
 #  updated_at             :datetime
 #  authentication_token   :string(255)
 #  role_id                :integer
+#  deleted_at             :datetime
 #
 
 require 'spec_helper'

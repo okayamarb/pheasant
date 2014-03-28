@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: topics
+#
+#  id         :integer          not null, primary key
+#  user_id    :integer
+#  title      :string(255)      not null
+#  content    :text
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'spec_helper'
 
 describe Topic do

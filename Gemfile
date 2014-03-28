@@ -34,6 +34,7 @@ gem "cancan"
 gem 'acts-as-taggable-on'
 gem 'acts_as_commentable'
 gem 'rack-cors'
+gem 'kakurenbo'
 gem "rails_12factor", group: :production
 group :development, :test do
   gem "rspec-rails"
