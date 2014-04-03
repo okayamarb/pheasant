@@ -14,6 +14,17 @@ module Pheasant
     I18n.enforce_available_locales = false
     config.i18n.default_locale = :ja
 
+    # Enable escaping HTML in JSON.
+    config.active_support.escape_html_entities_in_json = true
+
+    # Enable the asset pipeline
+    config.assets.enabled = false
+
+    # By default Rails API does not include the session middleware.
+    # Add the middleware back in to application b/c it requred by Devise and Warden
+    config.middleware.use ActionDispatch::Session::CookieStore
+    config.middleware.use Rack::MethodOverride
+
     config.generators do |g|
       g.orm :active_record
       g.test_framework :rspec, fixture: true, fixture_replacement: :factory_girl

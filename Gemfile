@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '4.0.4'
 
 gem 'rails-api'
 gem 'active_model_serializers'
@@ -33,7 +33,7 @@ gem 'devise-token_authenticatable'
 gem "cancan"
 gem 'acts-as-taggable-on'
 gem 'acts_as_commentable'
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
 gem 'kakurenbo'
 gem "rails_12factor", group: :production
 group :development, :test do
