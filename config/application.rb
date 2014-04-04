@@ -53,10 +53,16 @@ module Pheasant
 
 
     # config.middleware.insert_before ActionDispatch::Static, Rack::Cors do
-    config.middleware.use Rack::Cors do
+    # config.middleware.use Rack::Cors do
+    config.middleware.insert_before Warden::Manager, Rack::Cors do
       allow do
         origins '*'
-        resource '*', :headers => :any, :methods => [:get, :post, :put, :patch, :delete, :options]
+        resource '*',
+                 headers: :any,
+                 methods: [:get, :post, :put, :patch, :delete, :options]
+        # ,
+        #          credentials: true,
+        #          max_age: 86400
       end
     end
   end
